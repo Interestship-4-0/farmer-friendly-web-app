@@ -1,0 +1,18 @@
+.top-heading{
+    margin:10px auto;
+    display:flex;
+    text-align: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+#top-heading{
+    margin-top: 100px;
+}
+.top-heading div:nth-of-type(1) {
+    font-size: 50px;
+    font-weight: bold;
+}
+.top-heading div:nth-child(2){
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,26 @@
+.headinglogin{
+    margin:10px auto;
+    display:flex;
+    text-align: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 50px;
+ }
+ #heading{
+    margin-top: 100px;
+ }
+ .image-box{
+    display: flex;
+    margin-top: 70px;
+    align-items: center;
+    justify-content: center;
+  }
+  .css-7ccyk1-MuiSvgIcon-root path{
+      color: black;
+  }
+  .imagebox{
+    margin: 70px;
+  }
+  .css-5eac6e-MuiButtonBase-root-MuiButton-root {
+    margin: 20px;
+  } 

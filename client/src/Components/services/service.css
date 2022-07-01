@@ -1,0 +1,142 @@
+#SERVICES>h1 {
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 400%;
+    color: black;
+    margin-bottom: 5px;
+}
+
+#SERVICES {
+    padding: 50px;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+
+}
+
+#SERVICES>p {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Paprika', cursive;
+    font-size: larger;
+}
+
+.service {
+    height: 30vw;
+    width: 30vw;
+}
+
+.service h1 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+
+}
+
+.service div {
+    height: 100%;
+    width: 100%;
+}
+
+.heading {
+    color: rgb(255, 213, 0);
+}
+
+.service img {
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: 30px auto;
+}
+
+.service p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 110%
+}
+
+@media (max-width:1330px) {
+    .service h1 {
+        font-size: 200%;
+    }
+}
+
+@media (max-width:1100px) {
+
+    .service p,
+    .service h1 {
+        text-align: left;
+    }
+
+    .service h1 {
+        font-size: 150%;
+    }
+
+    .service {
+        margin: 40px;
+    }
+}
+
+@media (max-width:800px) {
+    .services {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #SERVICES>h1 {
+        font-size: 300%;
+    }
+
+    #SERVICES>p {
+        font-size: medium;
+    }
+
+    .service {
+        margin-bottom: 20px;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        padding: 30px;
+    }
+
+    .service p,
+    .service h1 {
+        text-align: center;
+    }
+
+    .service p {
+        font-size: larger;
+    }
+
+    .service h1 {
+        font-size: 180%;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width:500px) {
+    #SERVICES>h1 {
+        font-size: 200%;
+    }
+}
+
+@media (max-width:310px) {
+    .service {
+        box-shadow: none;
+        padding: 0;
+    }
+
+    #SERVICES>h1 {
+        font-size: 150%;
+    }
+}
