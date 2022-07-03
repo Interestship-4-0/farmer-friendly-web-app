@@ -1,0 +1,40 @@
+.main{
+    display: flex;
+    flex-direction: row;
+}
+
+.copyright{
+    padding: 20px 200px 20px 150px;
+}
+
+.socials{
+    padding: 20px 100px 20px 100px;
+}
+
+.terms{
+    padding: 20px 100px 20px 80px;
+}
+
+.icons{
+    display: inline-block;
+    border-radius: 100px;
+    color: white;
+    background-color: black;
+  padding: 0.5em 0.6em;
+}
+
+.terms{
+    color:#FAD22E;
+}
+
+input::placeholder{
+    font-size: 15px;
+    font-weight: bold;
+    color:lightslategrey;
+}
+
+textarea::placeholder{
+    font-size: 20px;
+    font-weight: bold;
+    color:lightslategrey;
+}
