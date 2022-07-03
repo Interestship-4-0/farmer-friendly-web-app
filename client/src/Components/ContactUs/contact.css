@@ -1,14 +1,16 @@
 .container{
     background-image: url('contact.jpg');
-    background-size: cover;
+    background-size:cover;
     background-repeat: no-repeat;
+    background-position: center;
+    height: 580px;
 }
 
 .all{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    
+    margin-bottom: 30px;
 }
 
 .box{
@@ -36,7 +38,6 @@
     border-style: none;
     padding-left: 20px;
     padding-top: 20px;
-
 }
 
 .submit{
@@ -48,12 +49,15 @@
     background-color: #FAD22E;
     color: white;
     border-style: none;
-    margin-bottom: 40px;
     border-radius: 0.3rem;
+    justify-items: center;
+    display:block;
+    margin: 0 auto;
 }
 
-.section-title{
-    padding-top: 50px;
+.title{
+    padding-top: 30px;
+    text-align: center;
 }
 
 input::placeholder{
@@ -67,6 +71,7 @@ textarea::placeholder{
     font-weight: bold;
     color:lightslategrey;
 }
+
 
 
 

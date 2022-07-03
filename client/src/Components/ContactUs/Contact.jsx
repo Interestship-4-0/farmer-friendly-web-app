@@ -6,9 +6,9 @@ export const Contact = () => {
     <div>
     
         <div className='container'>
-              <div className='section-title'>
-                <h1 style={{color:"white"}}>CONTACT US</h1>
-                <p style={{marginTop:"-15px", marginBottom:"50px", fontStyle:"italic"}}>
+              <div className='title'>
+                <h1 style={{color:"white", fontSize:"50px"}}>CONTACT US</h1>
+                <p style={{marginTop:"-20px", marginBottom:"50px",fontSize:"20px" ,fontStyle:"italic"}}>
                 We would like to hear from you...
                 </p>
               </div>
