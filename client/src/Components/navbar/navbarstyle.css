@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Barlow+Condensed&family=Cedarville+Cursive&family=Comfortaa:wght@600&family=Comic+Neue:wght@5;400&family=Courgette&family=Grape+Nuts&family=Lemonada:wght@400;600&family=Lobster&family=Montserrat:wght@600&family=Overlock:ital,wght@0,400;1,900&family=Paprika&family=Permanent+Marker&family=Secular+One&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Barlow+Condensed&family=Cedarville+Cursive&family=Comfortaa:wght@600&family=Comic+Neue:wght@300;400&family=Courgette&family=Grape+Nuts&family=Lemonada:wght@400;600&family=Lobster&family=Montserrat:wght@600&family=Overlock:ital,wght@0,400;1,900&family=Paprika&family=Permanent+Marker&family=Poppins&family=Secular+One&display=swap');
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(6, 65, 6);
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+.css-19kzrtu {
+    padding: 2px!important;
+}
+#nav {
+    background-color:transparent;
+    box-shadow: none;
+
+}
+
+.css-130f8nx a {
+    color:white;
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 110%;
+    cursor: pointer;
+    margin: 0 10px 10px 10px;
+}
+path{
+    color: white;
+}
+
+.css-130f8nx a:hover {
+    text-decoration: underline;
+}
+
+.css-ahj2mt-MuiTypography-root {
+    overflow-x: hidden;
+}
+
+.content-1 {
+    text-align: center;
+    color: white;
+    margin: 80px 10px 10px 10px;
+    font-family: 'Courgette', cursive;
+    text-transform: capitalize;
+    font-size: 400%;
+}
+
+.bt-1 {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    margin: 80px auto;
+    height: 60px;
+    box-sizing: border-box;
+    width: 250px;
+    background-color: yellow;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: green;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    font-size: 150%;
+    transition: 0.5s;
+}
+
+.css-k008qs{
+    background-image: url("../../assets/bgimg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 50vw;
+    display: flex;
+    justify-content: center;
+    padding: 4px !important;
+}
+.logo{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 80px;
+    height: 80px;
+}
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
+    background-color: rgb(182, 245, 106) !important;
+}
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper .logo{
+    margin: 20px auto;
+}
+.drawerLink {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin:20px auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 110%;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.drawerLink:hover {
+    text-decoration: underline;
+}
+
+.bt-1:hover {
+    transform: scale(1.2);
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.content-2 {
+    text-align: center;
+    color: white;
+    margin: 50px 10px 10px 10px;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 2px;
+    font-size: 500%;
+    word-spacing: 5px;
+}
+
+@media (max-width:1320px) {
+    .content-1 {
+        font-size: 300%;
+        margin-top: 50px;
+    }
+
+    .content-2 {
+        font-size: 350%;
+    }
+}
+
+@media (max-width:1050px) {
+    .content-1 {
+        font-size: 250%;
+        margin-top: 40px;
+    }
+
+    .content-2 {
+        font-size: 350%;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:1010px) {
+    .css-k008qs {
+        height: 90vw;
+    }
+
+    .content-1,
+    .content-2 {
+        margin-top: 120px;
+    }
+
+    .bt-1 {
+        margin-top: 150px;
+    }
+}
+
+@media (max-width:920px) {
+    .css-k008qs{
+        height: 90vw;
+    }
+
+    .content-1,
+    .content-2 {
+        margin-top: 100px;
+    }
+
+    .bt-1 {
+        margin-top: 100px;
+    }
+
+    .css-130f8nx a {
+        margin: 10px;
+        font-size: 98%;
+    }
+}
+
+@media (max-width:830px) {
+
+    .content-1,
+    .content-2 {
+        margin-top: 60px;
+    }
+
+    .bt-1 {
+        margin-top: 80px;
+    }
+}
+@media (max-width:700px) {
+    .css-k008qs{
+        height: 100vw;
+    }
+
+    .bt-1 {
+        width: 300px;
+    }
+}
+
+@media (max-width:610px) {
+    .css-k008qs{
+        height: 120vw;
+    }
+
+    .content-1 {
+        font-size: 200%;
+    }
+
+    .content-2 {
+        font-size: 300%;
+    }
+}
+
+@media (max-width:500px) {
+    .css-k008qs{
+        height: 170vw;
+    }
+
+    .content-1 {
+        font-size: 200%;
+        margin-top: 120px;
+        margin-left: 10px;
+    }
+
+    .content-2 {
+        font-size: 230%;
+
+        margin-top: 80px;
+        margin-left: 10px;
+    }
+
+    .bt-1 {
+        width: 60%;
+    }
+}
+
+@media (max-width:410px) {
+    .css-k008qs {
+        height: 190vw;
+    }
+
+    .content-2 {
+        font-size: 230%;
+        margin-top: 50px;
+        margin-left: 20px;
+        text-align: left;
+    }
+
+    .content-1 {
+        text-align: left;
+        margin-top: 100px;
+        margin-left: 20px;
+    }
+    .bt-1{
+        width: 70%;
+    }
+}
+
+@media (max-width:320px) {
+    .css-k008qs{
+        height: 220vw;
+    }
+
+    .content-1 {
+        margin-top: 80px;
+    }
+
+    .bt-1 {
+        width: 80%;
+    }
+}

@@ -27,14 +27,3 @@
     color:#FAD22E;
 }
 
-input::placeholder{
-    font-size: 15px;
-    font-weight: bold;
-    color:lightslategrey;
-}
-
-textarea::placeholder{
-    font-size: 20px;
-    font-weight: bold;
-    color:lightslategrey;
-}

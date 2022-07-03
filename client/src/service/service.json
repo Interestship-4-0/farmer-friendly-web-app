@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "imageLink":"https://cdn2.iconfinder.com/data/icons/free-version/128/recycling-256.png",
+        "heading":"Sell the Agro Waste",
+        "subheading":"Sell the Agro-Waste at price you want"
+    },
+    {
+        "id":2,
+        "imageLink":"https://cdn0.iconfinder.com/data/icons/isometric-city-basic-transport/48/truck-front-01-256.png",
+        "heading":"Buy Agro-Waste in Bulk",
+        "subheading":"Obtain agro-Waste in Bulk"
+    },
+    {
+        "id":3,
+        "imageLink":"https://cdn3.iconfinder.com/data/icons/network-and-communications-1-1/130/20-256.png",
+        "heading":"Get agro-counselling",
+        "subheading":"Get words of wisdom for smart-farming from our team of experts and trigger your harvest"
+    }
+]
