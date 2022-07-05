@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Barlow+Condensed&family=Cedarville+Cursive&family=Comfortaa:wght@600&family=Comic+Neue:wght@300;400&family=Courgette&family=Finlandica:ital,wght@1,500&family=Grape+Nuts&family=Lemonada:wght@400;600&family=Lobster&family=Montserrat:wght@600&family=Overlock:ital,wght@0,400;1,900&family=Paprika&family=Permanent+Marker&family=Poppins&family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Barlow+Condensed&family=Cedarville+Cursive&family=Comfortaa:wght@600&family=Comic+Neue:wght@300;400&family=Courgette&family=Grape+Nuts&family=Lemonada:wght@400;600&family=Lobster&family=Montserrat:wght@600&family=Overlock:ital,wght@0,400;1,900&family=Paprika&family=Permanent+Marker&family=Poppins&family=Secular+One&display=swap');
+#register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+}
+input placeholder{
+    color: white;
+}
+.registerPage h1{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Finlandica', sans-serif;
+    font-size: 300%;
+}
+#register input{
+    display: block;
+    width: 40vw;
+    margin-top: 10px;
+    height: 45px;
+    text-align: center;
+    border-radius: 5px;
+   border: 2px solid white;
+   background-color: transparent;
+   font-size: 130%;
+   color: white;
+   font-family: 'Abel', sans-serif;
+}
+#register p{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: bolder;
+    margin-top: 20px;
+    font-size: 130%;
+    margin-left: 10px;
+}
+.registerPage{
+    background-image: url("../../assets/register.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#register button{
+    display: block;
+    width: 15vw;
+    height: 40px;
+    font-size: 120%;
+    margin: 40px auto;
+}
+::placeholder{
+    color: whitesmoke;
+    font-size: smaller;
+    opacity: 0.8;
+}
+:-ms-input-placeholder{
+    color: whitesmoke;
+    font-size: smaller;
+    opacity: 0.8;
+}
+::-ms-input-placeholder{
+    color: whitesmoke;
+    font-size: smaller;
+    opacity: 0.8;
+}
+@media (max-width:800px){
+    #register input{
+        width: 60vw;
+    }
+    #register button{
+        width: 25vw;
+    }
+}
+@media (max-width:500px){
+    #register input{
+        width: 80vw;
+    }
+    #register button{
+        width: 35vw;
+    }
+    .registerPage h1{
+        font-size: 200%;
+    }
+    #register p{
+        font-size: 110%;
+    }
+}
