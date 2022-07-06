@@ -1,0 +1,27 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.icons{
+    display: inline-block;
+    border-radius: 100px;
+    color: white;
+    background-color: black;
+  padding: 0.5em 0.6em;
+}
+.socials{
+    display: flex;
+}
+.terms{
+    color:#FAD22E;
+}
+
+@media (max-width:600px){
+   .main{
+    flex-direction: column;
+   }
+}

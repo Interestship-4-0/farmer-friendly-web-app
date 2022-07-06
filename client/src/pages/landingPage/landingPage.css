@@ -1,13 +1,13 @@
 .ch #nav {
-    background-color: rgb(182, 245, 106);
+    background-color: rgb(131, 80, 41);
     box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
 }
 
 .ch .css-130f8nx a {
-    color: black;
+    color: white;
 }
 .ch path {
-    color: black;
+    color: white;
 }
 body{
     overflow-x: hidden;

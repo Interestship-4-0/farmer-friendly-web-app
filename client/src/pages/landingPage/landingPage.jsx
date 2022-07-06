@@ -4,6 +4,8 @@ import DrawerAppBar from "../../Components/navbar/navbar";
 import { useState } from 'react';
 import LoginRegister from '../../Components/LoginRegister/LoginRegister';
 import About from '../../Components/About/About';
+import FooterPart from '../../Components/footer/footerPart';
+import ContactUs from '../../Components/ContactUs/Contact'
 function LandingPage() {
     const [navBg, setNavBg] = useState(false);
     const changeBackground = () => {
@@ -35,6 +37,8 @@ function LandingPage() {
             <Services />
             <LoginRegister/>
             <About/>
+            <ContactUs/>
+            <FooterPart/>
 
         </>
     )

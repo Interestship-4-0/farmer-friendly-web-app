@@ -5,6 +5,8 @@
     flex-direction: column;
     font-weight: bold;
     font-size: 50px;
+    justify-content: center;
+    align-items: center;
  }
  #heading{
     margin-top: 100px;
@@ -13,14 +15,49 @@
     display: flex;
     margin-top: 70px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
   }
   .css-7ccyk1-MuiSvgIcon-root path{
       color: black;
   }
   .imagebox{
-    margin: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .css-5eac6e-MuiButtonBase-root-MuiButton-root {
     margin: 20px;
   } 
+  .css-7ccyk1-MuiSvgIcon-root{
+    color: black;
+  }
+  .loginRegister{
+    width: 300px!important;
+    height: 300px!important;
+  }
+  @media (max-width:800px){
+   .loginRegister{
+      width: 200px!important;
+      height: 200px!important;
+    }
+    #heading{
+      font-size: 40px;
+      text-align: center;
+    }
+  }
+  @media (max-width:500px){
+    .image-box{
+      flex-direction: column;
+    }
+    #heading{
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+  @media (max-width:500px){
+    #heading{
+      font-size: 25px;
+      text-align: center;
+    }
+  }

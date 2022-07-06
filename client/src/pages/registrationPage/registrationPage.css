@@ -5,81 +5,129 @@
     flex-direction: column;
     justify-content: center;
     align-items:center ;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 40vw;
+    height: 800px;
+    margin: 30px auto;
+    box-shadow: 0 0 8px #000;
 }
-input placeholder{
-    color: white;
+
+
+input::placeholder{
+    font-size: 14px;
+    font-weight: 400;
 }
 .registerPage h1{
     color: white;
     text-align: center;
-    margin-top: 20px;
+    position: relative;
+    top: 10px;
     font-family: 'Finlandica', sans-serif;
-    font-size: 300%;
+    font-size: 250%;
 }
+.select path{
+    color: black;
+}
+.select{
+    display: block;
+    height: 40px;
+    color: black;
+    font-size: 14px;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+.css-1s2u09g-control,.css-319lph-ValueContainer{
+    height: 40px!important;
+}
+.css-14el2xx-placeholder {
+    position: relative;
+    top: -8px;
+}
+
 #register input{
     display: block;
-    width: 40vw;
-    margin-top: 10px;
-    height: 45px;
-    text-align: center;
+    width: 30vw;
+    margin-top: 20px;
+    height: 40px;
+    text-align: left;
+    padding-left: 10px;
     border-radius: 5px;
-   border: 2px solid white;
-   background-color: transparent;
-   font-size: 130%;
-   color: white;
-   font-family: 'Abel', sans-serif;
+   border: 1px solid white;
+   background-color: white;
+   font-size: 14px;
+   color: black;
+   font-family: 'Montserrat', sans-serif;
 }
 #register p{
     font-family: 'Montserrat', sans-serif;
     color: white;
+    position: relative;
+    top: -20px;
     font-weight: bolder;
-    margin-top: 20px;
-    font-size: 130%;
-    margin-left: 10px;
+   text-align: center;
 }
-.registerPage{
-    background-image: url("../../assets/register.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+#register a{
+    color: lightblue;
+}
+#register:before {
+    background-image: url("../../assets/registerBg.jpg");
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	content: "";
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	display: block;
+    background-attachment: scroll;
+	
 }
 #register button{
     display: block;
     width: 15vw;
     height: 40px;
-    font-size: 120%;
-    margin: 40px auto;
+    margin:20px auto 40px auto;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #55d483
+}
+#register button:hover{
+    background-color:  #1976d2;
 }
 ::placeholder{
-    color: whitesmoke;
+    color: white;
     font-size: smaller;
-    opacity: 0.8;
 }
 :-ms-input-placeholder{
-    color: whitesmoke;
+    color: white;
     font-size: smaller;
-    opacity: 0.8;
 }
 ::-ms-input-placeholder{
-    color: whitesmoke;
+    color: white;
     font-size: smaller;
-    opacity: 0.8;
 }
-@media (max-width:800px){
-    #register input{
+@media (max-width:870px){
+    #register{
         width: 60vw;
+    }
+    #register input{
+        width: 50vw;
     }
     #register button{
         width: 25vw;
     }
 }
-@media (max-width:500px){
-    #register input{
+@media (max-width:580px){
+    #register{
         width: 80vw;
+    }
+    #register input{
+        width: 70vw;
     }
     #register button{
         width: 35vw;
@@ -89,5 +137,18 @@ input placeholder{
     }
     #register p{
         font-size: 110%;
+    }
+}
+@media (max-width:400px){
+    .registerPage h1{
+        font-size: 150%;
+    }
+    input::placeholder,.css-14el2xx-placeholder{
+        font-size: 11px;
+    }
+}
+@media (max-width:300px){
+    input::placeholder,.css-14el2xx-placeholder{
+        font-size: 10px;
     }
 }

@@ -13,15 +13,17 @@ function LoginRegister() {
       </div>
       <div className='image-box'>
         <div className='imagebox'>
-          <ManageAccountsIcon sx={{fontSize:"310px"}}/>
+          <ManageAccountsIcon className='loginRegister' sx={{fontSize:"310px"}}/>
           <br/>
-          <Button onClick={()=>navigate("/register")} variant="contained"  sx={{ bgcolor:"#55d483",marginLeft:10,padding: "12px 35px",fontSize:"17px" }} size="large">
+          <Button onClick={()=>{
+            window.scrollTo(0,0);
+            navigate("/register");}} variant="contained"  sx={{ bgcolor:"#55d483",marginLeft:10,padding: "12px 35px",fontSize:"17px" }} size="large">
                 Register
           </Button>
         </div>
 
         <div className='imagebox'>
-          <HowToRegIcon sx={{fontSize:"310px"}}/>
+          <HowToRegIcon className='loginRegister' sx={{fontSize:"310px"}}/>
           <br/>
           <div className='ok'>
           <Button onClick={()=>navigate("/login")} variant="contained"  sx={{bgcolor:"#55d483", marginLeft:10 ,padding: "12px 35px",fontSize:"17px"}} size="large">

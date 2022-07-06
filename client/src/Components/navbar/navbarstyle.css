@@ -26,6 +26,7 @@
     text-decoration: none;
     font-size: 110%;
     cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
     margin: 0 10px 10px 10px;
 }
 path{
@@ -70,7 +71,7 @@ path{
 }
 
 .css-k008qs{
-    background-image: url("../../assets/bgimg.jpg");
+    background-image: url("../../assets/backimg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
@@ -84,11 +85,10 @@ path{
     display: block;
     margin-top: 5px;
     margin-bottom: 5px;
-    width: 80px;
-    height: 80px;
+    border-radius: 40px;
 }
 .css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
-    background-color: rgb(182, 245, 106) !important;
+    background-color: rgb(131, 80, 41) !important;
 }
 .css-4t3x6l-MuiPaper-root-MuiDrawer-paper .logo{
     margin: 20px auto;
@@ -96,12 +96,13 @@ path{
 .drawerLink {
     display: block;
     text-decoration: none;
-    color: black;
+    color: white;
     margin:20px auto;
     font-family: 'Montserrat', sans-serif;
     font-size: 110%;
     margin-top: 20px;
     cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .drawerLink:hover {
@@ -177,7 +178,7 @@ path{
 
     .css-130f8nx a {
         margin: 10px;
-        font-size: 98%;
+        font-size: 90%;
     }
 }
 
