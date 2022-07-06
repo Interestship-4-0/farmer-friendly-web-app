@@ -27,3 +27,10 @@
     color:#FAD22E;
 }
 
+@media only screen and (max-width: 480px) {
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
