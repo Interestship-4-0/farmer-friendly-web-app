@@ -63,7 +63,7 @@ const Dashboard = () => {
                    <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"40px"}}></i></h4>
                    <h4  className="text">CORN BOTS</h4>
                    <button onClick={()=>{
-                    redirect("cornbots");
+                    redirect("cornbot");
                    }} type="button" className="btn">SELL THE WASTE</button>
               </div>
         </div>
