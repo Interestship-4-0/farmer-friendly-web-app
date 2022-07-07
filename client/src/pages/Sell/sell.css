@@ -9,7 +9,7 @@ body{
   
   
   
-  .container{
+  .sell{
       color:white;
       display:flex;
       align-items:center;
@@ -23,12 +23,14 @@ body{
         background-color:rgba(0,0,0,0.7); 
         padding:10px;
         display:flex;
+        justify-content: center;
+        align-items: center;
         flex-direction:column;
         color: white;
         font-family: 'Poppins', sans-serif;
         border-radius: 0.5rem;
     }
-    .form-box::before{
+    .sell-form::before{
         background-image: url("../../assets/backimg.jpg");
 	width: 100%;
 	height: 100%;
@@ -71,13 +73,13 @@ body{
         background-size: cover !important;
         background-position: center;
     }
-    .container{
+    .sell{
       display: flex;
       flex-direction: column;
       height: 590px !important;
       width: auto !important;
     }
-    .form-box{
+    .sell-form{
         display: flex;
         width: auto;
         height: auto;  

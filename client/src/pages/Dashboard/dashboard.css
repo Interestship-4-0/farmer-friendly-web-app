@@ -1,7 +1,7 @@
 
 
-.container{
-  background-image: url("../../assets/image.jpg"); 
+.dashboard{
+  background-image: url(../../assets/image.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
     display:flex;
@@ -109,7 +109,7 @@ td {
     background-position: center;
     background-size: auto;
 } */
-  .container{
+  .dashboard{
     display: flex;
     flex-direction: column;
     height: auto !important;
