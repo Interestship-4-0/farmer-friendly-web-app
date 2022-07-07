@@ -14,6 +14,10 @@ const sell=()=>{
     data:{
       quantity:`${quantity}`
     }
+  }).then((res)=>{
+    alert("successfully submitted");
+  }).catch((err)=>{
+    alert("some error occurred! Please try again after some time");
   })
 }
   return (
