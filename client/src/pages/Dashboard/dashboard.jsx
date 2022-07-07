@@ -83,7 +83,7 @@ const Dashboard = () => {
         </div>
         </div>
        </div>
-       <div className="footer">
+       <div className="footer2">
         <h1>Total Revenue Generated : 0</h1>
        </div>
         

@@ -1,15 +1,7 @@
-body{
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    color:white;
-    background-image: url(./image.jpg);
 
-  }
   
   .container{
+      color:white;
       display:flex;
       align-items:center;
       justify-content:center;
@@ -50,7 +42,7 @@ body{
 
 @media only screen and (max-width: 480px) {
     body{
-        background-image: url(./image.jpg);
+        /* background-image: url(./image.jpg); */
         background-size: cover !important;
         background-position: center;
     }

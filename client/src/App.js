@@ -5,9 +5,14 @@ import Sell from './pages/Sell/sell';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage/>}></Route>
-    </Routes> 
+    // <Routes>
+    //   <Route path="/" element={<LandingPage/>}></Route>
+    // </Routes> 
+    <>
+      <LandingPage/>
+    
+  
+    </>
   
 
   );
