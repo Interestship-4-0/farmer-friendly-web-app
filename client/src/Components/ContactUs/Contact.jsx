@@ -4,8 +4,9 @@ import './contact.css'
 export const Contact = () => {
   return (
     <div>
-    
+  
         <div className='container' id="CONTACT">
+        <div className='container1'>
               <div className='title'>
                 <h1 style={{color:"white", fontSize:"50px"}}>CONTACT US</h1>
                 <p style={{marginTop:"-20px", marginBottom:"50px",fontSize:"20px" ,fontStyle:"italic"}}>
@@ -48,7 +49,8 @@ export const Contact = () => {
               </form>
             </div>
           </div>
+          </div>
   )
 }
 
-export default Contact
+export default Contact;

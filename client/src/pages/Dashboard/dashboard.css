@@ -1,7 +1,7 @@
 
 
-.dashboard{
-  background-image: url(./image.jpg);
+.container{
+  background-image: url("../../assets/image.jpg"); 
     background-repeat: no-repeat;
     background-size: cover;
     display:flex;
@@ -37,11 +37,11 @@
 }
 .btn{
   margin: 0 auto;
-  width: 100%;
   padding: 8px;
   font-weight: bold;
   font-size: 10px;
   cursor: pointer;
+  display: flex;
 }
 
 table {
@@ -55,17 +55,20 @@ th {
   font-size: 20px;
   color: forestgreen;
   font-weight: bold;
+  flex: 1;
 }
   
 td {
   text-align: center;
   font-size: 25px;
   color: black;
+  flex: 1;
 }
 
 .main{
   display: flex;
   margin-bottom: 30px;
+  display: flex;
 }
 
 .mainbox{
@@ -80,12 +83,69 @@ td {
 }
 
 .text{
+  display: flex;
   margin-top: -5px;
-  margin-bottom: -5px;
+  margin-bottom: 20px;
 }
 
 .text2{
   margin-top: 10px;
   margin-bottom: 15px;
+  display: flex;
+}
+
+.footer2{
+  color: black;
+  background-color: rgba(34, 139, 34,0.8);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 480px) {
+  /* body{
+    background-image: url(./image.jpg);
+    background-size: cover !important;
+    background-position: center;
+    background-size: auto;
+} */
+  .container{
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+    width: auto !important;
+  }
+  table{
+    display: block !important;
+    margin: 0 auto;
+    align-items: center !important;
+    width: auto;
+    height:auto;
+  }
+  .mainbox{
+    display: flex;
+    width: auto !important;
+    height: auto !important;
+  }
+  .main{
+    width: auto !important;
+    height: auto !important;
+    display: flex;
+    flex-direction: row;
+  }
+  .box1{
+    width:auto;
+    font-size: 10px;
+    align-items: center;
+  }
+  .box2{
+    font-size: 10px !important;
+    width: auto;
+    align-items: center;
+  }
+  .text{
+    justify-content: center;
+    margin-top: 20px;
+  }
 }
 

@@ -36,37 +36,35 @@ const Dashboard = () => {
           <div className="main">
            <div className="box1">
                <div className="header-form">
-                   <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"30px"}}></i></h4>
+                   <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"40px"}}></i></h4>
                    <h4  className="text">WHEAT HUSK</h4>
-                   <h5 className="text2">Quantity : 0</h5>
                    <button type="button" className="btn">SELL THE WASTE</button>
               </div>
         </div>
         <div className="box2">
         <div className="header-form">
-                   <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"30px"}}></i></h4>
+                   <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"40px"}}></i></h4>
                    <h4  className="text">RICE HUSK</h4>
                    <h5 className="text2">Quantity : 0</h5>
                    <button onClick={()=>{
                     navigate("/sell");
                    }} type="button" className="btn">SELL THE WASTE</button>
+                   <button type="button" className="btn">SELL THE WASTE</button>
               </div>
         </div>
         </div>
         <div className="main">
            <div className="box1">
            <div className="header-form">
-                   <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"30px"}}></i></h4>
+                   <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"40px"}}></i></h4>
                    <h4  className="text">CORN BOTS</h4>
-                   <h5 className="text2">Quantity : 0</h5>
                    <button type="button" className="btn">SELL THE WASTE</button>
               </div>
         </div>
         <div className="box2">
         <div className="header-form">
-                   <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"30px"}}></i></h4>
+                   <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"40px"}}></i></h4>
                    <h4  className="text">TOBACCO CROP WASTE</h4>
-                   <h5 className="text2">Quantity : 0</h5>
                    <button type="button" className="btn">SELL THE WASTE</button>
               </div>
         </div>
@@ -74,23 +72,25 @@ const Dashboard = () => {
         <div className="main">
            <div className="box1">
            <div className="header-form">
-                   <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"30px"}}></i></h4>
+                   <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"40px"}}></i></h4>
                    <h4  className="text">CASTOR CROP WASTE</h4>
-                   <h5 className="text2">Quantity : 0</h5>
                    <button type="button" className="btn">SELL THE WASTE</button>
               </div>
         </div>
         <div className="box2">
         <div className="header-form">
-                   <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"30px"}}></i></h4>
-                   <h4 style={{fontSize:"14px"}} className="text">COTTON PLANTS LEFT OUT</h4>
-                   <h5 className="text2">Quantity : 0</h5>
+                   <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"40px"}}></i></h4>
+                  <h5 className="text">COTTON PLANTS LEFT OUT</h5>
                    <button type="button" className="btn">SELL THE WASTE</button>
               </div>
         </div>
         </div>
         </div>
-       </div>  
+       </div>
+       <div className="footer2">
+        <h1>Total Revenue Generated : 0</h1>
+       </div>
+        
        </center>
     </div>
   )
