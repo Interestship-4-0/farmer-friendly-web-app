@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import * as EmailValidator from "email-validator";
 import Select from "react-select";
 import { useState } from "react";
+import axios from 'axios';
 import WarningModal from "../../Components/warningModel/warningModal";
 function Register() {
     const[show,setShow]=useState(false);
@@ -49,37 +50,63 @@ function Register() {
             var regNameL = /^[a-zA-Z]+ [a-zA-Z]+$/;
             var regNameF = /^[a-zA-Z]+$/;
             var regex=/^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/;
-            if(stateName==="" || stateName===undefined){
-                setShow(true);
-                SetWarn("Please select a state");
-            }
-            if(districtName==="" || districtName===undefined){
-                setShow(true);
-                SetWarn("Please select a district");
-            }
             if(!regNameM.test(name) && !regNameL.test(name) && !regNameF.test(name)){
                 setShow(true);
                 SetWarn("Enter proper name");
             }
-            if(EmailValidator.validate(email)!==true){
+            else if(EmailValidator.validate(email)!==true){
                 setShow(true);
                 SetWarn("Enter proper mail address");
             }
-            if(number<=0 || number.length>10 || number.length<10){
+            else if(number<=0 || number.length>10 || number.length<10){
                 setShow(true);
                 SetWarn("Please enter a valid phone number");
             }
-            if(!regex.test(aadhar)){
+            else if(!regex.test(aadhar)){
                 setShow(true);
                 SetWarn("Please enter the valid aadhar number");
             }
-            if(dob==="" || dob===undefined){
+            else if(dob==="" || dob===undefined){
                 setShow(true);
                 SetWarn("Please select your date of birth")
             }
-            if(password!==confirm){
+            else if(stateName==="" || stateName===undefined){
+                setShow(true);
+                SetWarn("Please select a state");
+            }
+            else if(districtName==="" || districtName===undefined){
+                setShow(true);
+                SetWarn("Please select a district");
+            }
+            else if(password!==confirm){
                 setShow(true);
                 SetWarn("Both passwords should match");
+            }
+            else{
+                var lastName=name.split(' ').slice(-1).join(' ');
+                var firstName=name.split(' ')[0];
+                axios({
+                    method:"Post",
+                    url:"http://localhost:8080/registration",
+                    data:{
+                        firstName:`${firstName}`,
+                        lastName:`${lastName}`,
+                        email:`${email}`,
+                        password:`${password}`,
+                        state:`${stateName}`,
+                        district:`${districtName}`,
+                        village:`${village}`,
+                        phone:`${number}`,
+                        aadhar:`${aadhar}`,
+                        dob:`${dob}`
+                    }
+                }).then((res)=>{
+                    if(res.statusText==='OK'){
+                        alert("registered successfully");
+                    }
+                }).catch((err)=>{
+                    alert("Some error occurred. Please try again after some time");
+                })
             }
         }
 

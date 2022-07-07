@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import './dashboard.css';
 import "https://kit.fontawesome.com/94cb9e2368.js";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 const data = [
   { Waste: "Wheat Husk", Quantity: 0 },
   { Waste: "Rice Husk", Quantity: 0 },
@@ -12,6 +12,10 @@ const data = [
 ]
 const Dashboard = () => {
   const navigate=useNavigate();
+  const {id}=useParams();
+  const redirect=(waste)=>{
+    navigate(`/sell/search?id=${id}&waste=${waste}`);
+  }
   return (
     <div>
         <center>
@@ -38,7 +42,9 @@ const Dashboard = () => {
                <div className="header-form">
                    <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"40px"}}></i></h4>
                    <h4  className="text">WHEAT HUSK</h4>
-                   <button type="button" className="btn">SELL THE WASTE</button>
+                   <button onClick={()=>{
+                    redirect("wheathusk");
+                   }} type="button" className="btn">SELL THE WASTE</button>
               </div>
         </div>
         <div className="box2">
@@ -46,7 +52,7 @@ const Dashboard = () => {
                    <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"40px"}}></i></h4>
                    <h4  className="text">RICE HUSK</h4>
                    <button onClick={()=>{
-                    navigate("/sell");
+                    redirect("ricehusk");
                    }} type="button" className="btn">SELL THE WASTE</button>
               </div>
         </div>
@@ -56,14 +62,18 @@ const Dashboard = () => {
            <div className="header-form">
                    <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"40px"}}></i></h4>
                    <h4  className="text">CORN BOTS</h4>
-                   <button type="button" className="btn">SELL THE WASTE</button>
+                   <button onClick={()=>{
+                    redirect("cornbots");
+                   }} type="button" className="btn">SELL THE WASTE</button>
               </div>
         </div>
         <div className="box2">
         <div className="header-form">
                    <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"40px"}}></i></h4>
                    <h4  className="text">TOBACCO CROP WASTE</h4>
-                   <button type="button" className="btn">SELL THE WASTE</button>
+                   <button onClick={()=>{
+                    redirect("tobaccocrop");
+                   }} type="button" className="btn">SELL THE WASTE</button>
               </div>
         </div>
         </div>
@@ -72,14 +82,18 @@ const Dashboard = () => {
            <div className="header-form">
                    <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"40px"}}></i></h4>
                    <h4  className="text">CASTOR CROP WASTE</h4>
-                   <button type="button" className="btn">SELL THE WASTE</button>
+                   <button onClick={()=>{
+                    redirect("castorcrop");
+                   }} type="button" className="btn">SELL THE WASTE</button>
               </div>
         </div>
         <div className="box2">
         <div className="header-form">
                    <h4 style={{marginTop: "0px"}}><i class="fa-solid fa-cannabis" style={{fontSize:"40px"}}></i></h4>
                   <h5 className="text">COTTON PLANTS LEFT OUT</h5>
-                   <button type="button" className="btn">SELL THE WASTE</button>
+                   <button type="button" onClick={()=>{
+                    redirect("cottonplants");
+                   }} className="btn">SELL THE WASTE</button>
               </div>
         </div>
         </div>
