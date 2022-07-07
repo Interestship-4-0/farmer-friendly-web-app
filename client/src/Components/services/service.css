@@ -60,7 +60,9 @@
 .service p {
     margin-top: 10px;
     text-align: center;
-    font-size: 110%
+    font-size: 110%;
+    color: black;
+    font-family: sans-serif;
 }
 
 @media (max-width:1330px) {

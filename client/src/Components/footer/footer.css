@@ -19,7 +19,9 @@
 .terms{
     color:#FAD22E;
 }
-
+.copyright{
+    color: black;
+}
 @media (max-width:600px){
    .main{
     flex-direction: column;
