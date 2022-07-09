@@ -20,7 +20,8 @@ function LoginForm() {
           password:`${password}`
         }
       }).then((res)=>{
-        if(res.statusText==='OK'){
+        console.log(res);
+        if(res.status==200){
           const id=res.data.id;
           const expires=new Date();
           expires.setTime(expires.getTime()+7*(1000*60*60*24));

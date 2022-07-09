@@ -26,7 +26,7 @@ const {id}=useParams();
   useEffect(()=>{
     axios({
       method:"GET",
-      url:`http://localhoat:8081/api/v1/farmers/${id}/wastes`
+      url:`http://localhost:8081/api/v1/farmers/${id}/wastes`
     }).then((res)=>{
       setWasteData(res.data);
       setWaste(Object.keys(res.data));

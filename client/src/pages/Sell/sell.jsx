@@ -9,10 +9,10 @@ const Sell = () => {
   const [quantity, setQuantity] = React.useState(0);
   const sell = () => {
     axios({
-      method: "Post",
-      url: `http://localhost:8080/api/v1/farmers/${id}/${waste}`,
+      method: "Put",
+      url: `http://localhost:8081/api/v1/farmers/${id}/${waste}`,
       data: {
-        id:id,
+        id:`${id}`,
         quantity: `${quantity}`,
         revenue:0
       }

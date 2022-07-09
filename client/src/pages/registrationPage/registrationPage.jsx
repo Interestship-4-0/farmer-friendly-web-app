@@ -60,10 +60,10 @@ function Register() {
                 setShow(true);
                 SetWarn("Enter proper mail address");
             }
-            else if(number<=0 || number.length>10 || number.length<10){
-                setShow(true);
-                SetWarn("Please enter a valid phone number");
-            }
+            // else if(number<=0 || number.length>10 || number.length<10){
+            //     setShow(true);
+            //     SetWarn("Please enter a valid phone number");
+            // }
             else if(!regex.test(aadhar)){
                 setShow(true);
                 SetWarn("Please enter the valid aadhar number");
@@ -76,10 +76,10 @@ function Register() {
                 setShow(true);
                 SetWarn("Please select a state");
             }
-            else if(districtName==="" || districtName===undefined){
-                setShow(true);
-                SetWarn("Please select a district");
-            }
+            // else if(districtName==="" || districtName===undefined){
+            //     setShow(true);
+            //     SetWarn("Please select a district");
+            // }
             else if(password!==confirm){
                 setShow(true);
                 SetWarn("Both passwords should match");
@@ -90,24 +90,24 @@ function Register() {
                     lastName="";
                 }
                 var firstName=name.split(' ')[0];
-                var adn=Number(aadhar.split(' ').join(''));
+                // var adn=Number(aadhar.split(' ').join(''));
                 axios({
-                    method:"Post",
-                    url:"http://localhost:8080/registration",
+                    method:"POST",
+                    url:"http://localhost:8081/register",
                     data:{
                         firstName:`${firstName}`,
                         lastName:`${lastName}`,
                         email:`${email}`,
-                        phoneNo:`${number}`,
+                        phoneNo: number,
                         dob:`${dob}`,
                         state:`${stateName}`,
-                        district:`${districtName}`,
+                        // district:`${districtName}`,
                         village:`${village}`,
-                        aadharNo:`${adn}`,
+                        aadharNo:`${aadhar}`,
                         password:`${password}`,
                         }
-                }).then((res)=>{
-                    if(res.statusText==='OK'){
+                }).then((res)=>{                    
+                    if(res.data==='Success'){
                         alert("registered successfully");
                         navigate("/login");
                     }
