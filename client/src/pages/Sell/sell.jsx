@@ -6,15 +6,17 @@ const Sell = () => {
   const queryParams = new URLSearchParams(window.location.search);
   const id = queryParams.get("id");
   const waste = queryParams.get("waste");
+  var costPerQuantity=1;
   const [quantity, setQuantity] = React.useState(0);
   const sell = () => {
+    var revenue=quantity*costPerQuantity;
     axios({
       method: "Put",
       url: `http://localhost:8081/api/v1/farmers/${id}/${waste}`,
       data: {
         id:`${id}`,
         quantity: `${quantity}`,
-        revenue:0
+        revenue:`${revenue}`
       }
     }).then((res) => {
       alert("successfully submitted");

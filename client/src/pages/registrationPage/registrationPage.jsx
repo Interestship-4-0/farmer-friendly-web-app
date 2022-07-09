@@ -90,6 +90,7 @@ function Register() {
                     lastName="";
                 }
                 var firstName=name.split(' ')[0];
+                var num=number.toString();
                 // var adn=Number(aadhar.split(' ').join(''));
                 axios({
                     method:"POST",
@@ -98,7 +99,7 @@ function Register() {
                         firstName:`${firstName}`,
                         lastName:`${lastName}`,
                         email:`${email}`,
-                        phoneNo: number,
+                        phoneNo: `${num}`,
                         dob:`${dob}`,
                         state:`${stateName}`,
                         // district:`${districtName}`,
