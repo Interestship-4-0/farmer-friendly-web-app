@@ -4,6 +4,7 @@ import LoginForm from './pages/loginPage/loginPage';
 import Register from './pages/registrationPage/registrationPage';
 import Dashboard from './pages/Dashboard/dashboard';
 import Sell from './pages/Sell/sell'
+import { withCookies } from 'react-cookie';
 function App() {
   return (
 
@@ -17,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+export default withCookies(App);

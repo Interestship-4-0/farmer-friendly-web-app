@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import './loginForm.css'
 import axios from 'axios';
+import { useCookies } from 'react-cookie';
 import {useNavigate} from "react-router-dom"
 import { Button } from '@mui/material';
 function LoginForm() {
   const [email,setEmail]=useState(undefined);
   const [password,setPassword]=useState(undefined);
   const navigate=useNavigate();
+  const[cookies,setCookies]=useCookies(["user"]);
   const handleSubmit=(event)=>{
     if(email!=="" && email!==undefined && password!=="" && password!==undefined){
      event.preventDefault();
@@ -20,7 +22,14 @@ function LoginForm() {
       }).then((res)=>{
         if(res.statusText==='OK'){
           const id=res.data.id;
+          const expires=new Date();
+          expires.setTime(expires.getTime()+7*(1000*60*60*24));
+          setCookies("id",res.data.id,{path:'/',expires});
+          setCookies("mail",email,{path:'/',expires});
           navigate(`/dashboard/${id}`);
+        }
+        else{
+          alert("Either email/password wrong");
         }
       }).catch((err)=>{
         alert("Some error occurred. Please try again after some time");

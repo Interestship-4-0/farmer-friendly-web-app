@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import * as EmailValidator from "email-validator";
 import Select from "react-select";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import WarningModal from "../../Components/warningModel/warningModal";
 function Register() {
@@ -25,6 +26,7 @@ function Register() {
             "value":"no state selected","label":"no state selected"
         }
     ]);
+    const navigate=useNavigate();
     let statesAndDistricts=require("../../districtsAndStatesData.json");
     const states=statesAndDistricts.map(r=>r.state);
     const handlechange=(event)=>{
@@ -84,7 +86,11 @@ function Register() {
             }
             else{
                 var lastName=name.split(' ').slice(-1).join(' ');
+                if(lastName===undefined){
+                    lastName="";
+                }
                 var firstName=name.split(' ')[0];
+                var adn=Number(aadhar.split(' ').join(''));
                 axios({
                     method:"Post",
                     url:"http://localhost:8080/registration",
@@ -92,17 +98,18 @@ function Register() {
                         firstName:`${firstName}`,
                         lastName:`${lastName}`,
                         email:`${email}`,
-                        password:`${password}`,
+                        phoneNo:`${number}`,
+                        dob:`${dob}`,
                         state:`${stateName}`,
                         district:`${districtName}`,
                         village:`${village}`,
-                        phone:`${number}`,
-                        aadhar:`${aadhar}`,
-                        dob:`${dob}`
-                    }
+                        aadharNo:`${adn}`,
+                        password:`${password}`,
+                        }
                 }).then((res)=>{
                     if(res.statusText==='OK'){
                         alert("registered successfully");
+                        navigate("/login");
                     }
                 }).catch((err)=>{
                     alert("Some error occurred. Please try again after some time");

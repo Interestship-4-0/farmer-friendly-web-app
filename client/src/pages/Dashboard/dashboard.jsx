@@ -1,39 +1,73 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './dashboard.css';
 import "https://kit.fontawesome.com/94cb9e2368.js";
 import {useNavigate, useParams} from "react-router-dom";
-const data = [
-  { Waste: "Wheat Husk", Quantity: 0 },
-  { Waste: "Rice Husk", Quantity: 0 },
-  { Waste: "Corn Bots", Quantity: 0},
-  { Waste: "Tobacco Crop Waste", Quantity: 0},
-  { Waste: "Castor Crop Waste", Quantity: 0},
-  { Waste: "Cotton Plants Left Out", Quantity: 0},
-]
+import axios from 'axios';
+import { useState } from 'react';
+
 const Dashboard = () => {
-  const navigate=useNavigate();
-  const {id}=useParams();
+  const data =
+  { "Wheat Husk": 0 ,
+  "Rice Husk": 0 ,
+  "Corn Bot": 0,
+  "Tobacco Crop Waste": 0,
+  "Castor Crop Waste": 0,
+  "Cotton Plants Left Out": 0
+};
+const[wasteData,setWasteData]=useState(data);
+const keys=Object.keys(data);
+const[waste,setWaste]=useState(keys);
+const[revenue,setRevenue]=useState(0);
+const navigate=useNavigate();
+const {id}=useParams();
   const redirect=(waste)=>{
     navigate(`/sell/search?id=${id}&waste=${waste}`);
   }
+  useEffect(()=>{
+    axios({
+      method:"GET",
+      url:`http://localhoat:8081/api/v1/farmers/${id}/wastes`
+    }).then((res)=>{
+      setWasteData(res.data);
+      setWaste(Object.keys(res.data));
+       setRevenue(Object.values(res.data).reduce((total,num)=>{
+        return total+num;
+       }));
+    }).catch((err)=>{
+      console.log(err);
+    })
+  });
   return (
     <div>
+      <button onClick={()=>{
+         document.cookie="id=;expires=Thu,01 Jan 1970 00:00:00 UTC;path=/;";
+         document.cookie="mail=;expires=Thu,01 Jan 1970 00:00:00 UTC;path=/;";
+         window.location.href="/";
+      }} >Log Out</button>
         <center>
         <div className="dashboard">
           <div className="table">
           <table>
+            <thead>
         <tr>
           <th>WASTE - TYPE</th>
           <th>QUANTITY OF WASTE</th>
         </tr>
-        {data.map((val, key) => {
-          return (
-            <tr key={key}>
-              <td>{val.Waste}</td>
-              <td>{val.Quantity}</td>
+        </thead>
+       <tbody>
+       {
+          waste.map((key,index)=>{
+            return(
+              <tr key={index} >
+              <td>{key}</td>
+              <td>{wasteData[key]}</td>
             </tr>
-          )
-        })}
+
+            )
+            
+          })
+        }
+       </tbody>
       </table>
           </div>
           <div className="mainbox">
@@ -100,10 +134,11 @@ const Dashboard = () => {
         </div>
        </div>
        <div className="footer2">
-        <h1>Total Revenue Generated : 0</h1>
+        <h1>Total Revenue Generated : {revenue}</h1>
        </div>
         
        </center>
+       
     </div>
   )
 }

@@ -12,11 +12,13 @@ const Sell = () => {
       method: "Post",
       url: `http://localhost:8080/api/v1/farmers/${id}/${waste}`,
       data: {
+        id:id,
         quantity: `${quantity}`,
         revenue:0
       }
     }).then((res) => {
       alert("successfully submitted");
+      window.location.reload();
     }).catch((err) => {
       alert("some error occurred! Please try again after some time");
     })
