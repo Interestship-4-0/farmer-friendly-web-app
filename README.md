@@ -22,8 +22,8 @@ This web application is an approach to connect farmers and bio-waste industries 
 ### Screenshot
 
 
-![Landing Page](./screenshots/landing-page.png)
-![Dashboard](./screenshots/dashboard.png)
+![Landing Page](./screenshots/landing-page.PNG)
+![Dashboard](./screenshots/dashboard.PNG)
 
 ### Links
 
